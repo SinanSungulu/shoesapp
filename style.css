@@ -5,9 +5,8 @@
     list-style: none;
     text-decoration: none;
 }
-label,input {
+label, input {
     display: none;
-    
 }
 body {
     position: relative;
@@ -37,14 +36,13 @@ span {
     height: 2px;
     background-color: #434863;
 }
-
 .logo {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 5px;
-    }
+}
 .logo-cnt {
     padding: 60px;
     text-align: center;
@@ -57,36 +55,30 @@ span {
     justify-content: center;
     color: aliceblue;
     position: relative;
-
     & span:first-child {
         font-size: calc(100%*4);
-    }
+   }
     & span:last-child {
         font-size: calc(100%*1.5);
-
-    }
+   }
     &::before {
         content: "";
         position: absolute;
         width: 96%;
         height: 90%;
         border: 2px solid aliceblue;
-
-    }
+   }
 }
 #nav {
     width: 70%;
     display: flex;
     justify-content: center;
     padding: 0 0 20px 0;
-
     & ul {
         display: flex;
         width: 50%;
         justify-content: space-evenly;
-
-    }
-
+   }
     & ul li {
         position: relative;
         width: 100px;
@@ -94,8 +86,7 @@ span {
         text-align: center;
         line-height: 30px;
         overflow: hidden;
-
-    }
+   }
     & ul li a {
         position: absolute;
         top: 0;
@@ -104,8 +95,7 @@ span {
         height: 100%;
         color: #7a6c62;
         font-size: 1.2rem;
-    }
-
+   }
     & ul li::before {
         content: attr(data-text);
         position: absolute;
@@ -118,12 +108,11 @@ span {
         transform: perspective(700px) rotateX(-90deg) translateY(-30px);
         transform-origin: bottom;
         transition: all .6s;
-    }
+   }
     & ul li:hover::before {
-        transform: rotateX(0) translateY(0) ;
+        transform: rotateX(0) translateY(0);
         background-color: #dedede;
-    }
-
+   }
     & ul li::after {
         content: attr(data-text);
         position: absolute;
@@ -136,35 +125,31 @@ span {
         transform: perspective(700px) rotateX(0deg) translateY(30px);
         transform-origin: top;
         transition: all .6s;
-    }
-   
+   }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     * {
         padding: 0;
         margin: 0;
-    }
+   }
     #header {
         flex-direction: row;
         justify-content: space-between;
-    }
+   }
     .logo {
         flex-basis: 70%;
         margin: 0 auto;
         & span:first-child {
             font-size: calc(100%*1.5);
-        }
+       }
         & span:last-child {
             font-size: calc(100%*1);
-        }
-
+       }
         & .logo-cnt {
             padding: 20px;
             margin: 0 auto;
-        }
-
-    }
-
+       }
+   }
     #nav {
         margin: 0 auto;
         position: absolute;
@@ -174,7 +159,7 @@ span {
         width: 100%;
         z-index: 4;
         transition: all 1s;
-        &  ul {
+        & ul {
             justify-content: space-evenly;
             width: 80%;
             align-items: center;
@@ -182,36 +167,33 @@ span {
             box-shadow: 0 70px 50px rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             transform: translateY(-150%);
-        }
-        
-    }
+       }
+   }
     .line {
         display: none;
-    }
-    label,input {
+   }
+    label, input {
         display: inline-block;
         position: relative;
-      
-    }
-    label{ 
-        flex-basis:30%;
+   }
+    label {
+        flex-basis: 30%;
         height: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 10px;
-    }
+   }
     label span {
         width: 30px;
         height: 2px;
         background-color: black;
-    }
+   }
     input {
         display: none;
-    }
-    input:checked + #nav {
+   }
+    input:checked+#nav {
         transform: translateY(140%);
-
-    }
+   }
 }
